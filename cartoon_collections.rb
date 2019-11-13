@@ -10,8 +10,14 @@ def long_planeteer_calls(calls)# code an argument here
   calls.any? {|call| call.size > 4}
 end
 
+# def find_the_cheese(food)# code an argument here
+#   food.find do |food_item|
+#     food_item == "cheddar" || food_item == "gouda" || food_item == "camembert"
+#   end
+# end
+
 def find_the_cheese(food)# code an argument here
   food.find do |food_item|
-    food_item == "cheddar" || food_item == "gouda" || food_item == "camembert"
+    food_item.include?("cheddar" || "gouda" ||  "camembert")
   end
 end
