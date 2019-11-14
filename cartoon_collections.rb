@@ -10,14 +10,20 @@ def long_planeteer_calls(calls)# code an argument here
   calls.any? {|call| call.size > 4}
 end
 
-# def find_the_cheese(food)# code an argument here
-#   food.find do |food_item|
-#     food_item == "cheddar" || food_item == "gouda" || food_item == "camembert"
-#   end
-# end
-
 def find_the_cheese(food)# code an argument here
   food.find do |food_item|
     food_item.include?("cheddar" || "gouda" ||  "camembert")
   end
 end
+
+#FlatIron solution: Store cheeses in array and do array.include?
+
+# potentially_cheesy_items = %w[umbrella spinach cheddar helicopter]
+#
+# def find_the_cheese(potentially_cheesy_items)
+#   cheeses = %w[gouda cheddar camembert]
+# 
+#   potentially_cheesy_items.find do |maybe_cheese|
+#     cheeses.include?(maybe_cheese)
+#   end
+# end
